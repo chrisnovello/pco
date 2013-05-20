@@ -1,5 +1,5 @@
 PCO   
-by [Chris Novello](http://chrisnovello.com)     
+by [Chris Novello](http://chrisnovello.com) ([@paperkettle](http://www.twitter.com/paperkettle))   
 
 You'll need the [oscP5 library](http://www.sojamo.de/libraries/oscP5/).
 
