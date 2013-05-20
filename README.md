@@ -1,7 +1,6 @@
-#PCO
-
-##by Chris Novello
-##chrisnovello.com
+PCO
+by Chris Novello
+chrisnovello.com
 
 You'll need the oscP5 library.
 http://www.sojamo.de/libraries/oscP5/
