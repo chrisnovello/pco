@@ -1,8 +1,7 @@
 PCO   
 by [Chris Novello](http://chrisnovello.com)     
 
-You'll need the oscP5 library.
-http://www.sojamo.de/libraries/oscP5/
+You'll need the [oscP5 library](http://www.sojamo.de/libraries/oscP5/).
 
 Custom Max Externals are also included in this release. If you're a Max user, this makes using PCO extremely easy.
 
