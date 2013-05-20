@@ -1,5 +1,7 @@
 PCO
+====================
 by Chris Novello
+---------------------
 chrisnovello.com
 
 You'll need the oscP5 library.
