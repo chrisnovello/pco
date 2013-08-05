@@ -1,9 +1,11 @@
 PCO   
 by [Chris Novello](http://chrisnovello.com) ([@paperkettle](http://www.twitter.com/paperkettle))   
 
-You'll need the [oscP5 library](http://www.sojamo.de/libraries/oscP5/).
+Conceived of as a videogame LFO for the illucia system, PCO produces surprisingly complex patterns with just a ball generator and two paddles.  
 
 For more info visit [illucia.com](http://illucia.com)'s software [page](http://illucia.com/software/)
+
+You'll need the [oscP5 library](http://www.sojamo.de/libraries/oscP5/).
 
 Custom Max Externals are also included in this release. If you're a Max user, this makes using PCO extremely easy.
 
