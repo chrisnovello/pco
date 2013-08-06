@@ -1,0 +1,165 @@
+{
+    "Name": "PCO",
+    "Version": "1.0", 
+    "IncomingOSCPort": 8800,
+    "OutgoingOSCPort": 8801,
+    "RemoteAddress": "127.0.0.1",    
+    
+    "Inputs":
+    [
+        {"Name": "Set Left Paddle Y Coordinate",  
+        "Address": "/PCO/SetLeftPaddleY",
+        "Description": "Set the left paddle's y coordinate onscreen.",
+        "Kind": "Continuous"},
+    
+        {"Name": "Set Right Paddle Y Coordinate",  
+        "Address": "/PCO/SetRightPaddleY",
+        "Description": "Set the right paddle's y coordinate onscreen.",
+        "Kind": "Continuous"},
+
+        {"Name": "Add A New Ball",  
+        "Address": "/PCO/AddANewBall",
+        "Description": "Adds a new ball!",
+        "Kind": "Trigger"},    
+        
+        {"Name": "Kill All Balls",  
+        "Address": "/PCO/KillAllBalls",
+        "Description": "Deletes all balls onscreen.",
+        "Kind": "Trigger"},    
+        
+        {"Name": "Set Ball Speed",  
+        "Address": "/PCO/SetBallSpeed",
+        "Description": "Sets rate of travel for all balls.",
+        "Kind": "Continuous"},   
+        
+        {"Name": "Set Ball Spawn Y Coordinate",  
+        "Address": "/PCO/SetBallSpawnY",
+        "Description": "Sets the Y coordinate where new balls will spawn.",
+        "Kind": "Continuous"},   
+        
+        {"Name": "Set Ball Spawn Angle",  
+        "Address": "/PCO/SetBallSpawnAngle",
+        "Description": "Sets the angle balls will travel when generated.",
+        "Kind": "Continuous"},   
+        
+        {"Name": "Fork Ball Spawn Angle",  
+        "Address": "/PCO/ForkBallSpawnAngle",
+        "Description": "If toggled on, balls will fork into 1 of 4 directions when spawned (direction will be a randomly selected 90 degree offset from the ball spwan angle).",
+        "Kind": "Switch"},   
+        
+ 
+        {"Name": "Toggle Ball Color",  
+        "Address": "/PCO/ToggleBallColor",
+        "Description": "Enables/disables color for all balls onscreen (default: on).",
+        "Kind": "Switch"},
+        
+        {"Name": "Set Ball Color's Red Hue",  
+        "Address": "/PCO/SetBallColorR",
+        "Description": "Sets the Red hue (for the RGB color) of new balls.",
+        "Kind": "Continuous"},   
+        
+        {"Name": "Set Ball Color's Green Hue",  
+        "Address": "/PCO/SetBallColorG",
+        "Description": "Sets the Green hue (for the RGB color) of new balls.",
+        "Kind": "Continuous"},   
+
+        {"Name": "Set Ball Color's Blue Hue",  
+        "Address": "/PCO/SetBallColorB",
+        "Description": "Sets the Blue hue (for the RGB color) of new balls.",
+        "Kind": "Continuous"},   
+
+        {"Name": "Set Maximum Number Of Balls",  
+        "Address": "/PCO/SetMaxNumberOfBalls",
+        "Description": "Sets the maximum number of balls allowed onscreen (can be used to save CPU resources, or create interesting ball-vanishing effects).",
+        "Kind": "Continuous"}
+    ],
+    
+    
+    "Outputs":
+    [
+
+        
+        {"Name": "Left Paddle Collided With A Ball",  
+        "Address": "/PCO/LeftPaddleCollidedWithABall",
+        "Description": "Sends a trigger when the left paddle collides with a ball.",
+        "Kind": "Trigger"},
+        
+        {"Name": "Left Paddle Missed A Ball",  
+        "Address": "/PCO/LeftPaddleMissedABall",
+        "Description": "Sends a trigger when a ball travels beyond the left paddle and goes offscreen (when the left paddle misses a ball).",
+        "Kind": "Trigger"},
+ 
+ 
+        {"Name": "Right Paddle Collided With A Ball",  
+        "Address": "/PCO/RightPaddleCollidedWithABall",
+        "Description": "Sends a trigger when the right paddle collides with a ball.",
+        "Kind": "Trigger"},
+        
+        {"Name": "Right Paddle Missed A Ball",  
+        "Address": "/PCO/RightPaddleMissedABall",
+        "Description": "Sends a trigger when a ball travels beyond the right paddle and goes offscreen (when the right paddle misses a ball).",
+        "Kind": "Trigger"},
+
+
+        {"Name": "Oldest Ball's X Coordinate",  
+        "Address": "/PCO/OldestBallX",
+        "Description": "The oldest ball onscreen's x coordinate.",
+        "Kind": "Continuous"},
+
+        {"Name": "Oldest Ball's Y Coordinate",  
+        "Address": "/PCO/OldestBallY",
+        "Description": "The oldest ball onscreen's y coordinate.",
+        "Kind": "Continuous"},
+        
+        
+        {"Name": "Newest Ball's X Coordinate",  
+        "Address": "/PCO/NewestBallX",
+        "Description": "The newest ball onscreen's x coordinate.",
+        "Kind": "Continuous"},
+
+        {"Name": "Newest Ball's Y Coordinate",  
+        "Address": "/PCO/NewestBallY",
+        "Description": "The newest ball onscreen's y coordinate.",
+        "Kind": "Continuous"},
+        
+        {"Name": "Game Initialized",  
+        "Address": "/PCO/GameInitialized",
+        "Description": "Sends a trigger when the game begins (can be useful for initializing values in a patch).",
+        "Kind": "Trigger"}
+    ],
+    
+    "About": 
+    [
+        "PCO (Paddle Controlled Oscillator) is a patchable (aka 'codebendable') game module by Chris Novello. With its simple ball generator and two paddles, PCO can produce surprisingly interesting results - it is a complex LFO for the illucia system.",
+                
+        "You can move paddles, generate balls, change the position and angle of new balls, change the color of the balls, change the speed of ball travel, etc. The game sends information about ball positions, collision events between balls and paddles, events when balls pass the paddles, etc. Please review the list of Inputs and Outputs for full documentation on this module's capabilities.", 
+        
+        "It is named 'Paddle Control Oscillator' as an homage to classic modular synthesizers, but also because it begins to resemble a waveform generator when flooded with hundreds of balls.",
+                
+        "Press the 'o' key to toggle an OSC port settings window.",
+        
+        "Tips: Use clocks, metronomes, or some other continuous trigger source for ball generation. Patch oscillators into this system (particularly ball color, direction, speed, paddle Y, etc). Use the Ball X/Y outs to control sample playheads (for a scrubber that reverses on collision) "
+    ],
+    
+    
+    "Author": "Chris Novello",
+    "Website": "http://www.illucia.com",
+    "License": "Creative Commons BY-SA-NC 3.0",
+    "LicenseWebsite" : "http://creativecommons.org/licenses/by-nc-sa/3.0/",    
+    
+    "illuciaSignalStandardVersion": "1.0",
+    "SignalLowValue": "0.0",
+    "SignalHighValue": "1.0",
+    "SupportedSignalKinds": 
+    [
+        {"Kind": "Continuous", "Type": "Float", "Description": "Uses all values between 0.0 and 1.0"}, 
+        {"Kind": "Trigger", "Type": "Float", "Description": "Inputs of this type listen for 1.0 value and ignore all others, and Outputs of this type send a 1.0 when a specified event happens"}, 
+        {"Kind": "Toggle Switch", "Type": "Float", "Description": "1.0 value is used for the 'on' position, while the 0.0 is used for the 'off' position"}
+    ],
+    
+    "illuciaMarkupVersion": "1.0"
+
+}
+    
+    
+        
